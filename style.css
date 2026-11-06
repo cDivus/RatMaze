@@ -167,6 +167,7 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     height: 940px;
+    min-height: 0;
 }
 
 .glass-panel {
@@ -180,6 +181,8 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    min-height: 0;
+    overflow: hidden;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
 }
 
@@ -215,6 +218,14 @@ h3 {
 
 .controls-group {
     margin-top: auto;
+    flex: 0 0 auto;
+}
+
+.info-group {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    min-height: 0;
 }
 
 /* Controls */
@@ -266,6 +277,7 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    flex: 0 0 auto;
 }
 
 button.primary-btn, button.secondary-btn {
@@ -323,6 +335,11 @@ button.primary-btn, button.secondary-btn {
     border-radius: 8px;
     padding: 1rem;
     font-size: 1.05rem;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
 }
 
 .metrics-panel p {
@@ -350,6 +367,10 @@ button.primary-btn, button.secondary-btn {
     margin-top: 0.8rem;
     padding-top: 0.6rem;
     border-top: 1px solid rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
 }
 
 .comparison-title {
@@ -363,9 +384,10 @@ button.primary-btn, button.secondary-btn {
 
 .comparison-list {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     gap: 0.7rem;
-    max-height: 260px;
+    min-height: 0;
     overflow-y: auto;
     padding-right: 0.2rem;
 }
